@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <title>login/signup</title>
+    <link rel="stylesheet" href="./css/4.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./fonts/icofont.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="register-page">
+
+        <div class="register-page register-page__left">
+            <div class="register-page__left-logo">
+                <img src="./pics/jobustanlogo.png" alt="">
+            </div>
+            <div class="register-page__left-text">
+                <h5>Looking for a Job?</h5>
+                <p>Register as a candidate to find your favourite job</p>
+            </div>
+            <div class="register-page__left-create">
+                <button>Create an account</button>
+            </div>
+            <div class="register-page__left-leftcornertext">
+                <p> <i class="icofont-copyright"></i>JOBUSTAN 2019</p>
+            </div>
+        </div>
+
+
+
+        <div class="register-page register-page__right">
+            <div class="register-page__right--frontdiv">
+                <p class="logintitle">Log in to your account</p>
+                <form action="">
+                    <div class="form-group">
+    <input  class="form-control" type="email" name="email" placeholder="Enter email">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                    <a class="forgot-pass" href="#">Forgot password?</a>
+                    <div class="button-group">
+                        <button>Home</button>
+                        <button>Login</button>
+                    </div>
+
+                    <p class="or">OR</p>
+                    <div class="button-group2">
+                        <button><i class="icofont-facebook button-icon"></i> Facebook</button>
+                        <button><i class="icofont-google-plus button-icon"></i> Google</button>
+                    </div>
+                    <div class="signup">
+                        <p>Dont have an account yet? <a class="signuplink" href="#">Sign up</a> </p>
+
+                    </div>
+                    </div>
+                
+
+                </form>
+
+            </div>
+
+            <div class="register-page__right--backdiv">
+
+                <p class="backdivtitle">Create your account</p>
+                <form action="">
+                    <div class="form-group inputgroup">
+                        <input class="form-control" type="text" placeholder="Name" >
+                        <input class="form-control" type="text" placeholder="Surname">
+                        <input class="form-control" type="email" placeholder="Enter email*" name="email">
+                        <input  class="form-control" type="password" placeholder="Password*" name="password">
+                        <input  class="form-control" type="password" placeholder="Confirm password*" name="password">
+                    </div>
+                    <p class="checkbox"><input type="checkbox"> I agree with <a href="#">The Terms and Conditions</a>
+                    </p>
+                    <div class="button-group">
+
+                        <button>Home</button>
+                        <button>Sign up</button>
+                    </div>
+                    <div class="signup">
+                        <p>Do you have an account? <a class="signinlink" href="#">Sign in</a> </p>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css("border-color", "#515151")
+            })
+            $("input").blur(function () {
+                $(this).css("border-color", "#919293")
+            })
+        })
+
+        
+    </script>
+        <script>
+                $(document).ready(function () {
+                    $(".signuplink").click(function(){
+                        $(".register-page__right--frontdiv").css("transform", "rotateX(180deg)");    
+                        $(".register-page__right--backdiv").css("transform", "rotateX(0deg)");  
+                    })
+                    $(".signinlink").click(function(){
+                        $(".register-page__right--frontdiv").css("transform", "rotateX(0deg)");    
+                        $(".register-page__right--backdiv").css("transform", "rotateX(180deg)");  
+                    })
+                   
+                })
+        
+                
+            </script>
+</body>
+
+</html>
